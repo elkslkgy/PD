@@ -1,0 +1,122 @@
+\documentclass{sigchi}
+% Use this command to override the default ACM copyright statement (e.g. for preprints). 
+% Consult the conference website for the camera-ready copyright statement.
+\toappear{
+Permission to make digital or hard copies of all or part of this work for personal or classroom use is granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. Copyrights for components of this work owned by others than the author(s) must be honored. Abstracting with credit is permitted. To copy otherwise, or republish, to post on servers or to redistribute to lists, requires prior specific permission and/or a fee. Request permissions from Permissions@acm.org.\\
+{\emph{UIST '19}}, October 14--17, 2018, Berlin, Germany \\
+\copyright~2018 Association for Computing Machinery.\\
+ACM ISBN 978-1-4503-5948-1/18/10...\$15.00\\
+https://doi.org/10.1145/3242587.3242620
+}
+% Arabic page numbers for submission. 
+% Remove this line to eliminate page numbers for the camera ready copy
+%\pagenumbering{arabic}
+% Load basic packages
+\usepackage{times}
+%\usepackage{uist}
+\usepackage{url}
+\usepackage{graphics}
+\usepackage{color}
+\usepackage[pdftex]{hyperref}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathptmx}
+\usepackage{subfigure}
+\graphicspath{{./images/}}
+\usepackage{balance}
+\newcommand{\etal}{{\it{et~al.}}}
+\newcommand{\eg}{e.g.,\ }
+\newcommand{\ie}{i.e.,\ }
+\newcommand{\aka}{a.k.a.\ }
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+\newcommand{\figname}{Figure}
+\newcommand{\tabname}{Table}
+\newcommand{\secname}{Section}
+\newcommand{\algoname}{Algorithm}
+\newcommand{\eqname}{Eq.}
+\newcommand{\projectname}{RFITouch}
+% llt: Define a global style for URLs, rather that the default one
+\makeatletter
+\def\url@leostyle{%
+\@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\small\bf\ttfamily}}}
+\makeatother
+\urlstyle{leo}
+% To make various LaTeX processors do the right thing with page size.
+\def\pprw{8.5in}
+\def\pprh{11in}
+\special{papersize=\pprw,\pprh}
+\setlength{\paperwidth}{\pprw}
+\setlength{\paperheight}{\pprh}
+\setlength{\pdfpagewidth}{\pprw}
+\setlength{\pdfpageheight}{\pprh}
+% Make sure hyperref comes last of your loaded packages, 
+% to give it a fighting chance of not being over-written, 
+% since its job is to redefine many LaTeX commands.
+\usepackage[pdftex]{hyperref}
+\hypersetup{
+pdftitle={\projectname: Modular Transparent Tangibles for Multi-Touch and Rich-ID Stackable Tangible Interactions},
+%pdfauthor={Rong-Hao Liang, Meng-Ju Hsieh, Jheng-You Ke, Jr-Ling Guo, Bing-Yu Chen},
+pdfkeywords={RFID;},
+bookmarksnumbered,
+pdfstartview={FitH},
+colorlinks,
+citecolor=black,
+filecolor=black,
+linkcolor=black,
+urlcolor=black,
+breaklinks=true,
+}
+% create a shortcut to typeset table headings
+\newcommand\tabhead[1]{\small\textbf{#1}}
+% add code block
+\usepackage{listings}
+\usepackage{color}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=0mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+% End of preamble. Here it comes the document.
+\begin{document}
+\title{\projectname: A High Resolution Multi-Touch Sensing Using UHF RFID}
+\teaser{
+        \centering
+       \includegraphics[width=1.0\textwidth]{images/Teaser.png}
+      \caption{
+      \projectname  is a high-resolution touch sensing (a) that can be used for enhancing the user experience, including 
+      (b) an augmented reality (AR) smart store, (c) a ubiquitous environment, (d) designing mass interactive objects.
+      }
+    \label{fig:Figure1}
+  }
+\maketitle
+\begin{abstract}
+\input{0_abstract.tex}
+\end{abstract}
+\keywords{touch user interface, RFID}
+\category{H.5.2.}{Information Interfaces and Presentation (e.g. HCI)}{User Interfaces}
+\input{1_introduction}
+\input{2_relatedworks}
+\input{3_design}
+\input{5_evaluations.tex}
+\input{6_applications.tex}
+\input{7_discussions.tex}
+\input{8_conclusion.tex}
+\balance
+\bibliographystyle{SIGCHI-Reference-Format}
+\bibliography{ref}
+\end{document}
