@@ -1,0 +1,53 @@
+#N canvas 215 57 1160 715 36;
+#X obj 243 187 metro 100;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array array1 100 float 5;
+#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0;
+#X coords 0 1 99 -1 200 140 1;
+#X restore 846 -19 graph;
+#X obj 244 261 tabwrite~ array1;
+#X obj 221 329 r~ feedback;
+#X obj 839 273 s~ feedback;
+#X obj 720 366 dac~;
+#X msg 111 551 clear;
+#X obj 208 97 tgl 50 0 empty empty empty 17 7 0 10 -260097 -1 -1 1
+1;
+#X obj 104 485 +~;
+#X obj 64 266 *~ 0.2;
+#X obj 216 409 *~ 0.5;
+#X obj 99 353 dac~;
+#X obj 698 201 delread~ mydelay 1200;
+#X obj 203 23 loadbang;
+#X obj 26 136 readsf~;
+#X msg 62 36 stop;
+#X msg 23 -37 open laugh3.wav \, start;
+#X msg 572 434 open echo.wav \, start;
+#X obj 568 510 writesf~;
+#X msg 508 360 stop;
+#X obj 80 609 delwrite~ mydelay 450;
+#X connect 0 0 2 0;
+#X connect 3 0 10 0;
+#X connect 6 0 20 0;
+#X connect 7 0 0 0;
+#X connect 7 0 9 1;
+#X connect 8 0 20 0;
+#X connect 9 0 8 0;
+#X connect 9 0 11 0;
+#X connect 9 0 11 1;
+#X connect 10 0 8 1;
+#X connect 12 0 4 0;
+#X connect 12 0 5 0;
+#X connect 12 0 5 1;
+#X connect 12 0 18 0;
+#X connect 13 0 7 0;
+#X connect 14 0 9 0;
+#X connect 14 0 2 0;
+#X connect 14 1 9 0;
+#X connect 14 1 2 0;
+#X connect 15 0 14 0;
+#X connect 16 0 14 0;
+#X connect 17 0 18 0;
+#X connect 19 0 18 0;

@@ -1,0 +1,18 @@
+#N canvas 377 24 945 620 10;
+#X obj 101 101 noise~;
+#X obj 243 155 abs~;
+#X obj 160 222 *~;
+#X obj 260 109 osc~ 0.1;
+#X obj 108 146 lop~ 200;
+#X obj 270 408 dac~;
+#X obj 371 148 vsl 20 128 1 0 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 12700 1;
+#X obj 269 330 *~;
+#X connect 0 0 4 0;
+#X connect 1 0 2 1;
+#X connect 2 0 7 0;
+#X connect 3 0 1 0;
+#X connect 4 0 2 0;
+#X connect 6 0 7 1;
+#X connect 7 0 5 0;
+#X connect 7 0 5 1;
